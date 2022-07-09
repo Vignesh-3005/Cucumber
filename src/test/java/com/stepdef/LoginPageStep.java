@@ -111,7 +111,7 @@ public class LoginPageStep {
 		// Assert.assertEquals("Verification Message", "Booking Confrimation", text);
 		driver.quit();
 		System.out.println(text);
-
+		System.out.println("GIT Verification");
 	}
 
 }
