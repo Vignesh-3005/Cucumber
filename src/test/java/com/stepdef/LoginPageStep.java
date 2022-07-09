@@ -112,6 +112,7 @@ public class LoginPageStep {
 		driver.quit();
 		System.out.println(text);
 		System.out.println("GIT Verification");
+		System.out.println("3rd confirmation");
 	}
 
 }
