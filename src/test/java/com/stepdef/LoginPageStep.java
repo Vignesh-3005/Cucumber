@@ -1,10 +1,8 @@
 package com.stepdef;
 
-import static org.junit.Assert.assertTrue;
-
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +13,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
+
+
 
 public class LoginPageStep {
 	WebDriver driver;
@@ -113,8 +113,13 @@ public class LoginPageStep {
 
 		// Assert.assertEquals("Verification Message", "Booking Confrimation", text);
 		driver.quit();
+		System.out.println(text);
+		System.out.println("GIT Verification");
+		System.out.println("3rd confirmation");
 		System.out.println("Venaik requirement");
 		System.out.println("Venaik update");
+
+
 	}
 
 }
