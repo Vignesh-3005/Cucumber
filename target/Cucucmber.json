@@ -1,0 +1,185 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 14,
+        "name": "Verifying login details with valid credentials",
+        "description": "",
+        "id": "verifying-adactin-hotel-details;verifying-login-details-with-valid-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 26249100900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on the Adactin Hotel page",
+            "match": {
+              "location": "LoginPageStep.user_is_on_the_Adactin_Hotel_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2179279500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User should perform lolgin \"VigneshChidam\" and \"XE607K\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"VigneshChidam\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"XE607K\"",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginPageStep.user_should_perform_lolgin_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2214898700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User should search hotel \"Sydney\",\"Hotel Creek\",\"Standard\",\"1 - One\",\"20/06/2022\", \"21/06/2022\", \"2 - Two\" and \"\u003cchildrenPerfRoom\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sydney\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"Hotel Creek\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Standard\"",
+                  "offset": 48
+                },
+                {
+                  "val": "\"1 - One\"",
+                  "offset": 59
+                },
+                {
+                  "val": "\"20/06/2022\"",
+                  "offset": 69
+                },
+                {
+                  "val": "\"21/06/2022\"",
+                  "offset": 83
+                },
+                {
+                  "val": "\"2 - Two\"",
+                  "offset": 97
+                },
+                {
+                  "val": "\"\u003cchildrenPerfRoom\u003e\"",
+                  "offset": 111
+                }
+              ],
+              "location": "LoginPageStep.user_should_search_hotel_and(String,String,String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1240685900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User should select hotel",
+            "match": {
+              "location": "LoginPageStep.user_should_select_hotel()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1400527100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should book a hotel \"vignesh\", \"cv\", \"mirattunilai, Pudukkottai\", \"1234123412345678\", \"VISA\", \"September\", \"2022\" and \"123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"vignesh\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"cv\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"mirattunilai, Pudukkottai\"",
+                  "offset": 42
+                },
+                {
+                  "val": "\"1234123412345678\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"VISA\"",
+                  "offset": 91
+                },
+                {
+                  "val": "\"September\"",
+                  "offset": 99
+                },
+                {
+                  "val": "\"2022\"",
+                  "offset": 112
+                },
+                {
+                  "val": "\"123\"",
+                  "offset": 123
+                }
+              ],
+              "location": "LoginPageStep.user_should_book_a_hotel_and(String,String,String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5709820800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User should confrim booking",
+            "match": {
+              "location": "LoginPageStep.user_should_confrim_booking()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1081409200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user should verify Order id",
+            "match": {
+              "location": "LoginPageStep.user_should_verify()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Verifying Adactin Hotel details",
+    "description": "",
+    "id": "verifying-adactin-hotel-details",
+    "keyword": "Feature",
+    "uri": "src/test/resources/FeatureFolder/Adactin.feature",
+    "tags": []
+  }
+]
