@@ -14,23 +14,24 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import 	org.junit.Assert;
+import org.junit.Assert;
 
 public class LoginPageStep {
 	WebDriver driver;
+
 	@Given("User is on the Adactin Hotel page")
 	public void user_is_on_the_Adactin_Hotel_page() {
 		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://adactinhotelapp.com/");
 	}
 
 	@When("User should perform lolgin {string} and {string}")
 	public void user_should_perform_lolgin_and(String name, String pass) {
-		WebElement userName =driver.findElement(By.id("username"));
+		WebElement userName = driver.findElement(By.id("username"));
 		userName.sendKeys(name);
-		WebElement password =driver.findElement(By.id("password"));
+		WebElement password = driver.findElement(By.id("password"));
 		password.sendKeys(pass);
 		WebElement tbnLogin = driver.findElement(By.id("login"));
 		tbnLogin.click();
@@ -38,8 +39,9 @@ public class LoginPageStep {
 	}
 
 	@When("User should search hotel {string},{string},{string},{string},{string}, {string}, {string} and {string}")
-	public void user_should_search_hotel_and(String location, String hotels, String roomTYpe, String onOfRooms, String checkInDate, String checkOutDate, String noOfAdult, String noOfChild) {
-		WebElement searchLOcation =driver.findElement(By.id("location"));
+	public void user_should_search_hotel_and(String location, String hotels, String roomTYpe, String onOfRooms,
+			String checkInDate, String checkOutDate, String noOfAdult, String noOfChild) {
+		WebElement searchLOcation = driver.findElement(By.id("location"));
 		searchLOcation.sendKeys(location);
 		WebElement searchHotels = driver.findElement(By.id("hotels"));
 		searchHotels.sendKeys(hotels);
@@ -54,7 +56,7 @@ public class LoginPageStep {
 		WebElement searchAdult = driver.findElement(By.id("adult_room"));
 		searchAdult.sendKeys(noOfAdult);
 		WebElement searchChild = driver.findElement(By.id("child_room"));
-		searchChild.sendKeys(noOfChild);	
+		searchChild.sendKeys(noOfChild);
 		WebElement clickSubmit = driver.findElement(By.id("Submit"));
 		clickSubmit.click();
 
@@ -62,16 +64,16 @@ public class LoginPageStep {
 
 	@When("User should select hotel")
 	public void user_should_select_hotel() {
-		WebElement btnSelect = driver.findElement(By.id("radiobutton_0"));  
+		WebElement btnSelect = driver.findElement(By.id("radiobutton_0"));
 		btnSelect.click();
 		WebElement continueSelect = driver.findElement(By.id("continue"));
 		continueSelect.click();
 
-
 	}
 
 	@When("User should book a hotel {string}, {string}, {string}, {string}, {string}, {string}, {string} and {string}")
-	public void user_should_book_a_hotel_and(String firstName, String lastName, String address, String cardNo, String cardType, String month, String year, String ccvNo) {
+	public void user_should_book_a_hotel_and(String firstName, String lastName, String address, String cardNo,
+			String cardType, String month, String year, String ccvNo) {
 		WebElement sendFirstName = driver.findElement(By.id("first_name"));
 		sendFirstName.sendKeys(firstName);
 		WebElement sendLastName = driver.findElement(By.id("last_name"));
@@ -94,28 +96,25 @@ public class LoginPageStep {
 
 	@When("User should confrim booking")
 	public void user_should_confrim_booking() {
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		WebElement getOrderNo = driver.findElement(By.name("order_no"));
 		String attribute = getOrderNo.getAttribute("value");
-		System.out.println("\n\norder id:"+attribute);
-
+		System.out.println("\n\norder id:" + attribute);
 
 	}
 
 	@Then("user should verify Order id")
 	public void user_should_verify() {
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		WebElement bookingVerify = driver.findElement(By.xpath("//td[text()='Booking Confirmation ']"));
 		String text = bookingVerify.getText();
 		Assert.assertTrue("verify message", text.contains("Confirmation"));
 
-
-		//Assert.assertEquals("Verification Message", "Booking Confrimation", text);
+		// Assert.assertEquals("Verification Message", "Booking Confrimation", text);
 		driver.quit();
-
+		System.out.println("Venaik requirement");
+		System.out.println("Venaik update");
 	}
-
-
 
 }
